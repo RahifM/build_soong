@@ -95,9 +95,13 @@ type variableProperties struct {
 			Enabled *bool
 		}
 
-                Has_legacy_camera_hal1 struct {
-                        Cflags []string
-                }
+		Has_legacy_camera_hal1 struct {
+			Cflags []string
+		}
+
+		Uses_media_extensions struct {
+			Cflags []string
+		}
 
 	} `android:"arch_variant"`
 }
@@ -175,8 +179,9 @@ type productVariables struct {
 
 	BoardUsesQTIHardware *bool `json:",omitempty"`
 
-        Has_legacy_camera_hal1     *bool `json:",omitempty"`
+	Has_legacy_camera_hal1     *bool `json:",omitempty"`
 
+	Uses_media_extensions      *bool `json:",omitempty"`
 }
 
 func boolPtr(v bool) *bool {
