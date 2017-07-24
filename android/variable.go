@@ -103,6 +103,10 @@ type variableProperties struct {
 			Cflags []string
 		}
 
+		Needs_text_relocations struct {
+			Cppflags []string
+		}
+
 	} `android:"arch_variant"`
 }
 
@@ -182,6 +186,9 @@ type productVariables struct {
 	Has_legacy_camera_hal1     *bool `json:",omitempty"`
 
 	Uses_media_extensions      *bool `json:",omitempty"`
+
+	Needs_text_relocations     *bool `json:",omitempty"`
+
 }
 
 func boolPtr(v bool) *bool {
