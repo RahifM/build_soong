@@ -88,6 +88,10 @@ type variableProperties struct {
 			Cppflags []string
 		}
 
+                Has_legacy_camera_hal1 struct {
+                        Cflags []string
+                }
+
 		// include Cardinal variables
 		Cardinal android.Product_variables
 	} `android:"arch_variant"`
@@ -157,6 +161,8 @@ type productVariables struct {
 	Override_rs_driver *string `json:",omitempty"`
 
         TargetUsesNoTrebleCamera *bool `json:",omitempty"`
+
+        Has_legacy_camera_hal1     *bool `json:",omitempty"`
 
 	// include Cardinal variables
 	Cardinal android.ProductVariables
