@@ -88,12 +88,16 @@ type variableProperties struct {
 			Cppflags []string
 		}
 
-                Has_legacy_camera_hal1 struct {
-                        Cflags []string
-                }
-
 		// include Cardinal variables
 		Cardinal android.Product_variables
+
+		Has_legacy_camera_hal1 struct {
+			Cflags []string
+		}
+
+		Uses_media_extensions struct {
+			Cflags []string
+		}
 	} `android:"arch_variant"`
 }
 
@@ -162,10 +166,11 @@ type productVariables struct {
 
         TargetUsesNoTrebleCamera *bool `json:",omitempty"`
 
-        Has_legacy_camera_hal1     *bool `json:",omitempty"`
-
 	// include Cardinal variables
 	Cardinal android.ProductVariables
+
+	Has_legacy_camera_hal1     *bool `json:",omitempty"`
+	Uses_media_extensions      *bool `json:",omitempty"`
 }
 
 func boolPtr(v bool) *bool {
