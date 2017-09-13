@@ -156,6 +156,8 @@ type productVariables struct {
 
 	Override_rs_driver *string `json:",omitempty"`
 
+        TargetUsesNoTrebleCamera *bool `json:",omitempty"`
+
 	// include Cardinal variables
 	Cardinal android.ProductVariables
 }
