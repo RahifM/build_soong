@@ -126,7 +126,11 @@ type variableProperties struct {
 		}
 
 		Target_legacy_mutex_handle struct {
-			Cflags []string
+		        Cflags []string
+		}
+
+		Target_shim_libs struct {
+			Cppflags []string
 		}
 
 		Device_support_hwfde struct {
@@ -264,6 +268,8 @@ type productVariables struct {
 	Target_init_vendor_lib *bool `json:",omitempty"`
 
 	Target_legacy_mutex_handle *bool `json:",omitempty"`
+
+        Target_shim_libs *string `json:",omitempty"`
 
 	// include Omnirom variables
 	Omnirom android.ProductVariables
