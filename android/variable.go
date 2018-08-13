@@ -71,6 +71,10 @@ type variableProperties struct {
 			Cflags []string
 		}
 
+                Needs_legacy_camera_hal1_dyn_native_handle struct {
+                        Cppflags []string
+                }
+
 		Needs_text_relocations struct {
 			Cppflags []string
 		}
@@ -172,6 +176,7 @@ type productVariables struct {
 	EnableCFI                  *bool `json:",omitempty"`
 	Device_uses_hwc2           *bool `json:",omitempty"`
 	Has_legacy_camera_hal1     *bool `json:",omitempty"`
+        Needs_legacy_camera_hal1_dyn_native_handle  *bool `json:",omitempty"`
 	Needs_text_relocations     *bool `json:",omitempty"`
         Target_shim_libs *string `json:",omitempty"`
 	Treble                     *bool `json:",omitempty"`
