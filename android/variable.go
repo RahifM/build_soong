@@ -133,6 +133,10 @@ type variableProperties struct {
 			Cppflags []string
 		}
 
+                Target_process_sdk_version_override struct {
+                        Cppflags []string
+                }
+
 		Device_support_hwfde struct {
 			Cflags []string
 			Header_libs  []string
@@ -270,6 +274,8 @@ type productVariables struct {
 	Target_legacy_mutex_handle *bool `json:",omitempty"`
 
         Target_shim_libs *string `json:",omitempty"`
+
+        Target_process_sdk_version_override *string `json:",omitempty"`
 
 	// include Omnirom variables
 	Omnirom android.ProductVariables
